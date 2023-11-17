@@ -1,1 +1,0 @@
-# namjatiffk.github.io
