@@ -195,7 +195,8 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
   font-weight: 800;
-  color: {{ site.navbar-text-col | default: "#404040" }};
+  /* color: {{ site.navbar-text-col | default: "#404040" }}; */
+  color: #FFF
 }
 
 .navbar-toggler {
@@ -781,9 +782,10 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 0.625rem 0.3125rem;
-  background-color: #FFF;
+  background-color: #404040;
   border-radius: 0;
-  color: {{ site.text-col | default: "#404040" }};
+  /* color: {{ site.text-col | default: "#404040" }}; */
+  color: #FFF
   padding: 0.75rem 1rem;
 }
 @media (min-width: 768px) {
