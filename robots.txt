@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://namjatiffk.github.io/sitemap.xml
