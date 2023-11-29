@@ -2,6 +2,7 @@
 layout: post
 title: Python MultiThreading은 효과적인가?
 subtitle: I/O Bound Tasks에는 쓸만한 MultiThreading!
+last_modified_at : 2023-11-29T11:00:00+09:00
 tags: [Python, Dev]
 categories : [Python]
 ---
@@ -9,7 +10,7 @@ categories : [Python]
 ### 네트워크 스캔 작업에 MultiThreading을 사용해도 효과적인 지 궁금할 땐 ChatGPT에게 문의하기
 
 Python은 GIL로 인해 멀티스레드 보다는 멀티프로세싱이 성능면에서 더 좋다고 한다. 실제로 멀티프로세스와 멀티스레드를 스크립트로 구현하여 테스트했을 때, 멀티스레드 성능이 프로세스만큼 좋진 않았다.<br>
-오히려 단일 스레드보다 다중 스레드가 더 작업 시간이 오래 걸리는 걸 볼 수 있었다. 이는 아마도 스레드끼리 queue를 공유하면서 Context Switching이 발생되었기 때문이다.
+오히려 단일 스레드보다 다중 스레드가 더 작업 시간이 오래 걸리는 걸 볼 수 있었다. 이는 아마도 스레드 간 Context Switching과 더불어 GIL의 영향일 것이다.
 
 그렇담 파이썬에서 멀티스레드는 정말 필요없는 것일까?
 이를 확인하기위해서 ChatGPT에 물어보니, I/O Bound한 작업에서는 효과가 있을 것이라는 답변을 받았다.
